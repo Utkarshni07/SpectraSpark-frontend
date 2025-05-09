@@ -1,0 +1,69 @@
+.strengths-container {
+  text-align: center;
+  padding: 70px 20px;
+  background: radial-gradient(circle at center, #161616, #0f0f0f);
+  color: #ffffff;
+}
+
+.strengths-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 45px;
+  background: linear-gradient(45deg, #ff6ec7, #00ffe7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.strengths-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 60px;
+}
+
+.strength-item {
+  background-color: #1b1b1b;
+  padding: 24px 32px;
+  border-radius: 14px;
+  font-size: 1.1rem;
+  border: 1px solid #2a2a2a;
+  max-width: 320px;
+  color: #ccc;
+  transition: all 0.3s ease;
+}
+
+.strength-item:hover {
+  border-color: #00ffe7;
+  transform: translateY(-6px);
+  box-shadow: 0 0 14px rgba(0, 255, 231, 0.2);
+  color: #fff;
+}
+
+.tech-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.tech-icon {
+  width: 80px;
+  height: 80px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tech-icon img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  filter: grayscale(100%) brightness(1.2);
+  transition: all 0.4s ease;
+  border-radius: 8px;
+}
+
+.tech-icon:hover img {
+  filter: grayscale(0%) brightness(1);
+  transform: scale(1.1);
+  box-shadow: 0 0 12px rgba(0, 255, 231, 0.25);
+}

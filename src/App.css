@@ -1,38 +1,105 @@
-.App {
+.hero-section {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.hero-content h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  animation: fadeInDown 1.2s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  animation: fadeInUp 1.5s ease;
 }
 
-@keyframes App-logo-spin {
+.hero-content button {
+  background-color: #ff7e5f;
+  border: none;
+  padding: 15px 40px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  animation: fadeInUp 2s ease;
+}
+
+.hero-content button:hover {
+  background-color: #feb47b;
+}
+
+/* Animations */
+@keyframes fadeInDown {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: translateY(-30px);
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #0a0a0a;
+  color: #ddd;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Space Grotesk', sans-serif;
+  letter-spacing: 0.5px;
+  color: #eee;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* .section {
+  padding: 80px 20px;
+}
+
+.section-heading {
+  font-size: 2.5rem;
+  background: linear-gradient(45deg, #ff6ec7, #00ffe7, #03e9f4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  margin-bottom: 50px;
+} */
