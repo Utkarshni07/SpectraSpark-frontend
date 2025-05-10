@@ -6,9 +6,11 @@ const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
     try {
       const res = await fetch("https://spectraspark-backend.onrender.com/contact", {
         method: "POST",
@@ -27,6 +29,8 @@ const Contact = () => {
     } catch (err) {
       console.error("Error submitting form: ", err);
       toast.error("Something went wrong. ❌ Check your connection.");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -56,7 +60,15 @@ const Contact = () => {
           value={message}
           onChange={(e) => setMessage(e.target.value)}
         ></textarea>
-        <button type="submit">Send Message</button>
+        <button type="submit" disabled={loading}>
+          {loading ? (
+            <>
+              <div className="button-spinner"></div> Sending...
+            </>
+          ) : (
+            "Send Message"
+          )}
+        </button>
       </form>
     </div>
   );

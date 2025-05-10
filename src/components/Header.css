@@ -82,7 +82,7 @@
     width: 230px;
     height: 100vh;
     padding: 60px 20px;
-    border-left: 2px solid #03e9f4;
+    border-left: 2px solid #ff6ec7;
     transition: right 0.3s ease;
     box-shadow: -5px 0 15px rgba(0, 255, 255, 0.1);
     z-index: 200;
