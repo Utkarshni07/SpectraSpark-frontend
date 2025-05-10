@@ -59,6 +59,13 @@
 
 /* Tablet & Mobile View */
 @media (max-width: 768px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 25px;
+  }
+
   .menu-icon {
     display: block;
   }
