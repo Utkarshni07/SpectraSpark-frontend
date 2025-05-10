@@ -67,3 +67,40 @@
   transform: scale(1.1);
   box-shadow: 0 0 12px rgba(0, 255, 231, 0.25);
 }
+
+/* Tablet */
+@media (max-width: 768px) {
+  .strengths-container h2 {
+    font-size: 2rem;
+    margin-bottom: 35px;
+  }
+
+  .strength-item {
+    padding: 22px 24px;
+    font-size: 1rem;
+    max-width: 270px;
+  }
+
+  .tech-icon {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .strengths-container h2 {
+    font-size: 1.8rem;
+  }
+
+  .strength-item {
+    padding: 20px 20px;
+    font-size: 0.95rem;
+    max-width: 100%;
+  }
+
+  .tech-icon {
+    width: 60px;
+    height: 60px;
+  }
+}

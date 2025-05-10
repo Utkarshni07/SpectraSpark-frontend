@@ -8,7 +8,6 @@ const Section = styled.div`
   padding: 70px 20px;
   text-align: center;
   border: 1px solid #2a2a2a;
-
 `;
 
 const Heading = styled.h2`
@@ -51,6 +50,34 @@ const Card = styled.div`
   p {
     font-size: 15px;
     color: #bbbbbb;
+  }
+
+  /* Tablet */
+  @media (max-width: 768px) {
+    width: 220px;
+    padding: 28px 20px;
+
+    h3 {
+      font-size: 19px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+
+  /* Mobile */
+  @media (max-width: 480px) {
+    width: 100%;
+    padding: 24px 18px;
+
+    h3 {
+      font-size: 18px;
+    }
+
+    p {
+      font-size: 13.5px;
+    }
   }
 `;
 

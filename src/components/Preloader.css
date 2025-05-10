@@ -34,3 +34,11 @@
     box-shadow: 0 0 20px #ff6ec7, 0 0 40px #ff6ec7, 0 0 60px #ff6ec7;
   }
 }
+
+@media (max-width: 400px) {
+  .loader {
+    width: 60px;
+    height: 60px;
+    border-width: 6px;
+  }
+}
