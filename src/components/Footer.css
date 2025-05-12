@@ -41,4 +41,8 @@
   .footer-links a {
     font-size: 0.95rem;
   }
+  .footer {
+    padding: 20px 15px;
+  }
 }
+

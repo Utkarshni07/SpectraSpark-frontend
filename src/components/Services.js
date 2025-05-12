@@ -51,6 +51,10 @@ const Card = styled.div`
     font-size: 15px;
     color: #bbbbbb;
   }
+  @media (max-width: 360px) {
+    padding: 25px 18px;
+    width: 90%;
+  }
 
   /* Tablet */
   @media (max-width: 768px) {
@@ -79,6 +83,8 @@ const Card = styled.div`
       font-size: 13.5px;
     }
   }
+}
+
 `;
 
 const IconWrapper = styled.div`

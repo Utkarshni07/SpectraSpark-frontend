@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Header.css";
-import { Link as ScrollLink } from "react-scroll";
+import { Link as ScrollLink } from 'react-scroll';
+
 import { FaBars } from "react-icons/fa";
 
 function Header() {
@@ -20,10 +21,10 @@ function Header() {
           <ScrollLink
             to="home"
             smooth={true}
-            duration={500}
+            duration={700}
             spy={true}
             exact="true"
-            offset={-80}
+            offset={-70}
             activeClass="active"
             onClick={handleClose}
           >
@@ -34,9 +35,9 @@ function Header() {
           <ScrollLink
             to="services"
             smooth={true}
-            duration={500}
+            duration={700}
             spy={true}
-            offset={-80}
+            offset={-70}
             activeClass="active"
             onClick={handleClose}
           >
@@ -47,9 +48,9 @@ function Header() {
           <ScrollLink
             to="strengths"
             smooth={true}
-            duration={500}
+            duration={700}
             spy={true}
-            offset={-80}
+            offset={-70}
             activeClass="active"
             onClick={handleClose}
           >
@@ -60,9 +61,9 @@ function Header() {
           <ScrollLink
             to="contact"
             smooth={true}
-            duration={500}
+            duration={700}
             spy={true}
-            offset={-80}
+            offset={-70}
             activeClass="active"
             onClick={handleClose}
           >
