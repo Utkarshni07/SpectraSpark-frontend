@@ -44,28 +44,33 @@
   color: #ff6ec7;
   font-size: 1.1rem;
   transition: color 0.3s ease;
+  cursor: pointer;
 }
 
 .nav-links a:hover {
   color: #03e9f4;
 }
 
+/* Active link highlight on scroll */
+.nav-links .active {
+  color: #03e9f4;
+}
+
+/* Mobile Menu Icon */
 .menu-icon {
   display: none;
-  font-size: 2rem;
+  font-size: 1.9rem;
   color: #03e9f4;
   cursor: pointer;
-  z-index: 300;
 }
 
 /* Tablet & Mobile View */
 @media (max-width: 768px) {
   .header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     padding: 18px 25px;
-  }
-
-  .logo {
-    font-size: 2rem;
   }
 
   .menu-icon {
@@ -74,7 +79,7 @@
 
   .nav-links {
     position: fixed;
-    top: 70px;
+    top: 80px;
     right: -100%;
     flex-direction: column;
     gap: 25px;
@@ -82,7 +87,7 @@
     width: 230px;
     height: 100vh;
     padding: 60px 20px;
-    border-left: 2px solid #ff6ec7;
+    border-left: 2px solid #03e9f4;
     transition: right 0.3s ease;
     box-shadow: -5px 0 15px rgba(0, 255, 255, 0.1);
     z-index: 200;
@@ -96,19 +101,19 @@
     margin-bottom: 20px;
   }
 
-  .nav-links a {
-    font-size: 1rem;
+  .logo {
+    font-size: 1.9rem;
   }
 }
 
-/* Narrow mobile screens */
+/* Narrow Mobile Screens */
 @media (max-width: 480px) {
   .header {
     padding: 15px 20px;
   }
 
   .logo {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
   }
 
   .nav-links {

@@ -93,7 +93,7 @@ const IconWrapper = styled.div`
 
 const ServicesSection = () => {
   return (
-    <Section>
+    <Section id="services">
       <Heading>Our Services</Heading>
       <ServiceGrid>
         <Card>

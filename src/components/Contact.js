@@ -35,7 +35,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="contact-page" data-aos="fade-up">
+    <div className="contact-page" id="contact" data-aos="fade-up">
       <h2>Let's Connect</h2>
       <p>Tell us about your project or query. We're always ready to help!</p>
       <form onSubmit={handleSubmit}>

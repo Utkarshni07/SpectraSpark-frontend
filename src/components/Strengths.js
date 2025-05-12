@@ -3,7 +3,7 @@ import "./Strengths.css";
 
 const Strengths = () => {
   return (
-    <div className="strengths-container">
+    <div className="strengths-container" id="strengths">
       <h2>Our Core Strengths</h2>
       <div className="strengths-list">
         <div className="strength-item">⚡ Client-first, tailored solutions</div>

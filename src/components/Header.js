@@ -1,35 +1,75 @@
 import React, { useState } from "react";
 import "./Header.css";
-import { Link } from "react-router-dom";
-import { FiMenu, FiX } from "react-icons/fi";
+import { Link as ScrollLink } from "react-scroll";
+import { FaBars } from "react-icons/fa";
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
-
-  const closeMenu = () => {
-    setMenuOpen(false);
-  };
+  const handleToggle = () => setMenuOpen(!menuOpen);
+  const handleClose = () => setMenuOpen(false);
 
   return (
     <header className="header">
       <div className="logo">SpectraSpark<span> Technology</span></div>
 
-      <div className="menu-icon" onClick={toggleMenu}>
-        {menuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
-      </div>
+      <FaBars className="menu-icon" onClick={handleToggle} />
 
-      <nav>
-        <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
-          <li><Link to="/" onClick={closeMenu}>Home</Link></li>
-          <li><Link to="/services" onClick={closeMenu}>Services</Link></li>
-          <li><Link to="/strengths" onClick={closeMenu}>Strengths</Link></li>
-          <li><Link to="/contact" onClick={closeMenu}>Contact</Link></li>
-        </ul>
-      </nav>
+      <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
+        <li>
+          <ScrollLink
+            to="home"
+            smooth={true}
+            duration={500}
+            spy={true}
+            exact="true"
+            offset={-80}
+            activeClass="active"
+            onClick={handleClose}
+          >
+            Home
+          </ScrollLink>
+        </li>
+        <li>
+          <ScrollLink
+            to="services"
+            smooth={true}
+            duration={500}
+            spy={true}
+            offset={-80}
+            activeClass="active"
+            onClick={handleClose}
+          >
+            Services
+          </ScrollLink>
+        </li>
+        <li>
+          <ScrollLink
+            to="strengths"
+            smooth={true}
+            duration={500}
+            spy={true}
+            offset={-80}
+            activeClass="active"
+            onClick={handleClose}
+          >
+            Strengths
+          </ScrollLink>
+        </li>
+        <li>
+          <ScrollLink
+            to="contact"
+            smooth={true}
+            duration={500}
+            spy={true}
+            offset={-80}
+            activeClass="active"
+            onClick={handleClose}
+          >
+            Contact
+          </ScrollLink>
+        </li>
+      </ul>
     </header>
   );
 }

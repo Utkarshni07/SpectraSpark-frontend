@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
-    <div className="hero-section">
+    <div className="hero-section" id="home">
       <div className="overlay">
         <div className="hero-content" data-aos="fade-up">
           <h1>Unleash Digital Brilliance with SpectraSpark</h1>
