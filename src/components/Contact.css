@@ -57,7 +57,7 @@ form button {
   color: #ffffff;
   text-decoration: none;
   font-weight: 600;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, opacity 0.3s ease;
   border: 2px solid #ff6ec7;
   outline: none;
   cursor: pointer;
@@ -77,8 +77,11 @@ form button:focus {
 }
 
 form button:disabled {
-  opacity: 0.7;
+  opacity: 0.6;
   cursor: not-allowed;
+  background: transparent;
+  color: #ccc;
+  border-color: #888;
 }
 
 .button-spinner {

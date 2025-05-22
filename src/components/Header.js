@@ -21,7 +21,7 @@ function Header() {
           <ScrollLink
             to="home"
             smooth={true}
-            duration={700}
+            duration={800}
             spy={true}
             exact="true"
             offset={-70}
@@ -35,7 +35,7 @@ function Header() {
           <ScrollLink
             to="services"
             smooth={true}
-            duration={700}
+            duration={800}
             spy={true}
             offset={-70}
             activeClass="active"
@@ -48,7 +48,7 @@ function Header() {
           <ScrollLink
             to="strengths"
             smooth={true}
-            duration={700}
+            duration={800}
             spy={true}
             offset={-70}
             activeClass="active"
@@ -61,7 +61,7 @@ function Header() {
           <ScrollLink
             to="contact"
             smooth={true}
-            duration={700}
+            duration={800}
             spy={true}
             offset={-70}
             activeClass="active"

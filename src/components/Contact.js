@@ -6,18 +6,29 @@ const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [loading, setLoading] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true);
+
+    // Name Validation
+    const nameRegex = /^[a-zA-Z\s]{3,}$/;
+    if (!nameRegex.test(name)) {
+      toast.error("Please enter a valid name (at least 3 alphabets). ❌");
+      return;
+    }
+
+    setIsSubmitting(true);
+
     try {
       const res = await fetch("https://spectraspark-backend.onrender.com/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, email, message }),
       });
+
       const data = await res.json();
+
       if (res.ok) {
         toast.success("Message sent successfully! ✅");
         setName("");
@@ -30,14 +41,15 @@ const Contact = () => {
       console.error("Error submitting form: ", err);
       toast.error("Something went wrong. ❌ Check your connection.");
     } finally {
-      setLoading(false);
+      setIsSubmitting(false);
     }
   };
 
   return (
-    <div className="contact-page" id="contact" data-aos="fade-up">
+    <div className="contact-page" data-aos="fade-up">
       <h2>Let's Connect</h2>
       <p>Tell us about your project or query. We're always ready to help!</p>
+
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -60,14 +72,9 @@ const Contact = () => {
           value={message}
           onChange={(e) => setMessage(e.target.value)}
         ></textarea>
-        <button type="submit" disabled={loading}>
-          {loading ? (
-            <>
-              <div className="button-spinner"></div> Sending...
-            </>
-          ) : (
-            "Send Message"
-          )}
+
+        <button type="submit" disabled={isSubmitting}>
+          {isSubmitting ? "Sending..." : "Send Message"}
         </button>
       </form>
     </div>
