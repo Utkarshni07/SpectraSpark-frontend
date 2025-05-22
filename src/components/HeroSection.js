@@ -1,6 +1,6 @@
 import React from "react";
 import "./HeroSection.css";
-import { Link } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll"; // import ScrollLink instead of react-router Link
 
 const HeroSection = () => {
   return (
@@ -8,10 +8,28 @@ const HeroSection = () => {
       <div className="overlay">
         <div className="hero-content" data-aos="fade-up">
           <h1>Unleash Digital Brilliance with SpectraSpark</h1>
-          <p>Modern Websites | Salesforce Development | Oracle Fusion | 3D Modelling | Branding</p>
+          <p>
+            Modern Websites | Salesforce Development | Oracle Fusion | 3D
+            Modelling | Branding
+          </p>
           <div className="hero-buttons">
-            <Link to="/services" className="hero-btn outline">Our Services</Link>
-            <Link to="/contact" className="hero-btn outline">Contact Us</Link>
+            <ScrollLink
+              to="services"
+              smooth={true}
+              duration={600}
+              offset={-70}
+            >
+              <button className="hero-btn outline">Our Services</button>
+            </ScrollLink>
+
+            <ScrollLink
+              to="contact"
+              smooth={true}
+              duration={600}
+              offset={-70}
+            >
+              <button className="hero-btn outline">Contact Us</button>
+            </ScrollLink>
           </div>
 
           <div className="scroll-hint">
